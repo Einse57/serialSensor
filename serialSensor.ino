@@ -15,7 +15,7 @@ int adcLine2  = A2;
 int adcLine1  = A1;   
 int adcLine0  = A0;   
 
-// Store ResMed sensor readings in a central location
+// Store sensor readings in a central location
 // [adcLine0MSB, adcLine0LSB, adcLine1MSB, adcLine1LSB, ...]
 byte adcValues[13];
 
@@ -183,7 +183,7 @@ adcValues[3] = curr_time >> 16;
 adcValues[2] = curr_time >> 8;
 adcValues[1] = curr_time;
 
-// send Msg ID for ResMed values
+// send Msg ID for sensor values
 adcValues[0] = 0xCC;
 
 // write results to serial
